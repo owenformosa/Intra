@@ -1,0 +1,28 @@
+{
+  "teams": [
+    {
+      "department": "Finance",
+      "name": "Alice Johnson",
+      "role": "Finance Manager",
+      "email": "alice.johnson@example.com"
+    },
+    {
+      "department": "Finance",
+      "name": "Bob Smith",
+      "role": "Accountant",
+      "email": "bob.smith@example.com"
+    },
+    {
+      "department": "IT",
+      "name": "Charlie Lee",
+      "role": "IT Support Lead",
+      "email": "charlie.lee@example.com"
+    },
+    {
+      "department": "IT",
+      "name": "Dana Kim",
+      "role": "System Administrator",
+      "email": "dana.kim@example.com"
+    }
+  ]
+}

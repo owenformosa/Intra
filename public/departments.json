@@ -1,0 +1,20 @@
+{
+  "departments": [
+    {
+      "name": "Finance",
+      "description": "Responsible for financial planning and reporting."
+    },
+    {
+      "name": "IT",
+      "description": "Manages IT infrastructure and support."
+    },
+    {
+      "name": "HR",
+      "description": "Human resources and employee wellbeing."
+    },
+    {
+      "name": "Operations",
+      "description": "Oversees day-to-day operations and logistics."
+    }
+  ]
+}

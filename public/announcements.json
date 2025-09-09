@@ -1,0 +1,14 @@
+{
+  "announcements": [
+    {
+      "title": "Quarterly All-Hands Meeting",
+      "date": "2025-09-10",
+      "content": "Join us for the Q3 all-hands meeting in the main conference hall at 10:00 AM."
+    },
+    {
+      "title": "New IT Security Policy",
+      "date": "2025-09-05",
+      "content": "Please review the updated IT security guidelines available on the intranet."
+    }
+  ]
+}

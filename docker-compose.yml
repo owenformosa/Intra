@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  intranet:
+    image: node:20-alpine
+    container_name: intranet
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
