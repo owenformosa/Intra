@@ -17,7 +17,7 @@ function formatDate(dateStr) {
 }
 
 // Render Announcements
-fetchData('/announcements.json').then(data => {
+fetchData('./announcements.json').then(data => {
   data.forEach(item => {
     const card = document.createElement('div');
     card.className = 'card bg-base-100 shadow-md p-4 rounded-lg hover:shadow-lg';
@@ -31,7 +31,7 @@ fetchData('/announcements.json').then(data => {
 }).catch(err => console.error(err));
 
 // Render News
-fetchData('/news.json').then(data => {
+fetchData('./news.json').then(data => {
   data.forEach(item => {
     const card = document.createElement('div');
     card.className = 'card bg-base-100 shadow-md p-4 rounded-lg hover:shadow-lg';
