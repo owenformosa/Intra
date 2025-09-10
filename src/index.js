@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('./announcements.json')
     .then(res => res.json())
     .then(data => {
-      const announcements = data.announcements || [];
+      const announcements = data.announcements || data; // supports array or {announcements: []}
       announcementsContainer.innerHTML = announcements.length
         ? announcements.map(item => createCard(item, "announcement")).join("")
         : '<p class="text-center w-full">No announcements available.</p>';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('./news.json')
     .then(res => res.json())
     .then(data => {
-      const news = data.news || [];
+      const news = data.news || data; // supports array or {news: []}
       newsContainer.innerHTML = news.length
         ? news.map(item => createCard(item, "news")).join("")
         : '<p class="text-center w-full">No news available.</p>';
@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // --- Date formatting ---
+  // --- Date formatting (DD-MM-YYYY) ---
   function formatDate(dateStr) {
     const d = new Date(dateStr);
+    if (isNaN(d)) return dateStr; // fallback if invalid
     const day = String(d.getDate()).padStart(2, '0');
     const month = String(d.getMonth() + 1).padStart(2, '0');
     const year = d.getFullYear();
