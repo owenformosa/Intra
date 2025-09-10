@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!announcementsContainer || !newsContainer) return;
 
   // --- Announcements fetch ---
-  fetch('/announcements.json')
+  fetch('./announcements.json')
     .then(res => res.json())
     .then(data => {
       const announcements = data.announcements || [];
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error("Announcements fetch error:", err));
 
   // --- News fetch ---
-  fetch('/news.json')
+  fetch('./news.json')
     .then(res => res.json())
     .then(data => {
       const news = data.news || [];
