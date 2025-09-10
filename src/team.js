@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   teamTitle.textContent = deptName;
   teamDesc.textContent = `Meet the members of the ${deptName} team.`;
 
-  fetch('/teams.json')
+  fetch('./teams.json')   // 🔧 fixed relative path
     .then(res => res.json())
     .then(data => {
       console.log("Teams JSON:", data);
-      const teams = data.teams || [];
+      const teams = data.teams || data; // supports both {teams:[]} or []
       // Filter team members by department
       const members = teams.filter(t => t.department === deptName);
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error("Teams fetch error:", err));
 
-  // Gradient sets for members (cycled)
+  // Gradient sets for members
   const gradients = [
     { from: 'from-purple-50', to: 'to-purple-100', text: 'text-purple-900' },
     { from: 'from-blue-50', to: 'to-blue-100', text: 'text-blue-900' },
